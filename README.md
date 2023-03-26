@@ -108,6 +108,7 @@ async function start() {
 }
 start();
 ```
+Notice: Async function is a block code, so it doesn’t affect program execution.
 
 ## Practice
 TBC
