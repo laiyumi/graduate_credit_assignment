@@ -114,7 +114,7 @@ Notice: Async function is a block code, so it doesn’t affect program execution
 ## Practice
 ### Task: Use asynchronous function to build a simple weather app.
 ### Requirements:
-1. You can use [weatherApp.js](./Practice/weatherApp.js) as a start code.
+1. You can use [weatherApp.js](./Practice/weatherApp.js) as a starter code.
 2. Implement at least one asynchronous function.
 3. Use `consolo.log` to display the weather result.
 
