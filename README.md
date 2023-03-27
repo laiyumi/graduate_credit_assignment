@@ -1,15 +1,15 @@
-## Teaching Tip
+## CSCI E-31 Teaching Tip
 # Asynchronous Programming: Callback, Promises, and Async 
 
-The default of JavaScript is synchronous and single-threaded. But when we deal with complex contexts, asynchronous programming shortens the proceeding time and creates a better user experience on the client side. There are three common ways of asynchronous programming.
+By default, JavaScript operates synchronously and within a single thread. However, when dealing with complex contexts, asynchronous programming can significantly reduce processing time and improve the user experience on the client side. There are three commonly used methods for asynchronous programming.
 
 
 |  | Callback | Promises | Async/Await |
 | ------------- | ------------- | ------------- | ------------- |
 | Concept       | A function that’s passed as a value to another function, and it is only be executed when the event happens. | Like people make promises, a promise in JavaScript is something happens later. | A function that dose not have chain structure. It uses `async` to declare asynchrony and `await` to return promises. |
 | Advantages    | Efficient in simple cases | Fits problems brought about by callback hell | Fits problems brought about by promises chaining. |
-| Disdvantages  | When the cases become complex, it might result in a callback hell because of the nested structure. | chaining promises together like callbacks can get pretty bulky and confusing | ------------- |
-| Outcome | return a function | `resole` Run and solve the promise; `reject` Error occurs | Calling an async function will always return a promise |
+| Disdvantages  | When the cases become complex, it might result in a callback hell because of the nested structure. | chaining promises together like callbacks can get pretty bulky and confusing | Cannot run on some old environments |
+| Outcome | return a function | `resolve` Run and solve the promise; `reject` Error occurs | return a promise |
 
 
 ## Callback
@@ -84,11 +84,12 @@ calculator.then(((sucessMsg)=>{
 A thenable is an object that has a `.then()` method. All Promises are thenable object, however, not all thenable objects are promises. For example, Mongoose queries are thenable, so it can be used as promises.
 
 ## Async and Await
-Declare an async function.
+`async` should be declared before `await`. In this example, the `asyncOperation()` returns a Promise. The `await` keyword is used to wait for that Promise to be resolved before assigning the result to the result variable.
 ```cpp
-async function asyncTask(){
-  // Do something here
-} 
+async function asyncFunction() {
+  const result = await asyncOperation();
+  console.log(result);
+}
 ```
 Example: The result is "Before 100 After". If we delete `await `, then the result changes to "Before 0 After".
 ```cpp
@@ -111,4 +112,14 @@ start();
 Notice: Async function is a block code, so it doesn’t affect program execution.
 
 ## Practice
-TBC
+### Task: Use asynchronous function to build a simple weather app.
+### Requirements:
+1. You can use [weatherApp.js](./weatherApp.js) as a start code.
+2. Implement at least one asynchronous function.
+3. Use `consolo.log` to display the weather result.
+
+## Related Resources
+Some resources that might help you through the practice.
+1. [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+2. [A Beginner’s Guide to JavaScript async/await, with Examples](https://www.sitepoint.com/javascript-async-await/#differentwaysofdeclaringasyncfunctions)
+3. [Node.js Readline() Module](https://nodejs.org/api/readline.html)
