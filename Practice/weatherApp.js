@@ -24,26 +24,30 @@ const reports = {
 
 // Get user input
 function ask() {
-
-  // Your code goes here
-
+    // TODO: Create an interface to read user's input
+    // TODO: Get user's input and return a promise
+    // TODO: Close the interface
+    // TODO: Resolve the promise
+    // TODO: Return the promise
 }
 
 
 // Use user input to check if it exists in the weather report
 function check() {
-
-  // Your code goes here
-
+    // TODO: Check if the input data exists in the dictionary
+    // TODO: If exisit, log out the weather report
+    // TODO: Resolve the promise
+    // TODO: If not, reject the promise
+    // TODO: Return the promise
 }
 
 
 async function main() {
   console.log("Welcome to today's weather report!")
 
-  // Your code goes here
+  // TODO: Get user input
+  // TODO: Check if the input data exists in the dictionary
 
   console.log("Thank you");
-
 }
 
