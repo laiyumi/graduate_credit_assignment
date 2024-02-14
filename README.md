@@ -1,4 +1,4 @@
-## CSCI E-31 Teaching Tip
+## Computer Graphics Learning Tip
 # Asynchronous Programming: Callback, Promises, and Async
 
 By default, JavaScript operates synchronously and within a single thread, meaning it can only execute one task at a time. In synchronous programming, each task is executed in sequence, one after the other. This can be inefficient when dealing with complex operations that take a long time to complete, such as network requests or file I/O because the program has to wait for the current task to finish before moving on to the next one. This can cause the program to become unresponsive and lead to a poor user experience, particularly on the client side. Asynchronous, on the other hand, allows the program to continue executing other tasks while waiting for a long-running operation to complete. This can significantly reduce processing time and improve the user experience on the client side, as the program can respond to user input and update the UI while waiting for operations to complete in the background.
